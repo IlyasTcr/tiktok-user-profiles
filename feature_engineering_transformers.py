@@ -1,18 +1,15 @@
-import numpy as np
 import pandas as pd
 from sklearn.base import BaseEstimator, TransformerMixin
-from sklearn.model_selection import KFold
-from category_encoders import MEstimateEncoder
-from functools import reduce
+from sklearn.decomposition import PCA
+from sklearn.preprocessing import StandardScaler
 
 import nltk
 nltk.download('punkt')
 nltk.download('stopwords')
 from nltk.corpus import stopwords
-from sklearn.decomposition import PCA
-from sklearn.preprocessing import StandardScaler
 
 
+# Define a function that checks if the user is likely a content creator based on the biography
 def is_user_creator(biography, keywords):
     # Tokenize the biography and convert to lower case
     tokens = nltk.word_tokenize(biography.lower())
@@ -48,7 +45,7 @@ class PCATransformer(BaseEstimator, TransformerMixin):
         self.standard_scaler = StandardScaler()
         self.pca = PCA()
 
-    # Fit method
+    # Fit method for pca (with scaled inputs)
     def fit(self, X, y=None):
         self.pca.fit(self.standard_scaler.fit_transform(X))
         return self
