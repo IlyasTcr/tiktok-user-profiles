@@ -71,3 +71,20 @@ class MissingValueIdentifier(BaseEstimator, TransformerMixin):
     # Transform method to check if the column values are null  
     def transform(self, X):
         return X[self.feature_name].isna().to_numpy().reshape(-1, 1)
+    
+
+class RatioTransformer(BaseEstimator, TransformerMixin):
+    # Initialize the class with the numerator and denominator
+    def __init__(self, numerator, denominator, epsilon=1e-7):
+        self.numerator = numerator
+        self.denominator = denominator
+        self.epsilon = epsilon
+
+    # Fit method for compatibility with sklearn API
+    def fit(self, X, y=None):
+        return self
+
+    # Transform method to return the ratio  
+    def transform(self, X):
+        ratio = X[self.numerator] / (X[self.denominator] + self.epsilon)
+        return ratio.to_numpy().reshape(-1, 1)
