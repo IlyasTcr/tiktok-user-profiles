@@ -69,7 +69,7 @@ class MissingValueIdentifier(BaseEstimator, TransformerMixin):
     def transform(self, X):
         return X[self.feature_name].isna().to_numpy().reshape(-1, 1)
     
-
+# Define a ratio transformer class
 class RatioTransformer(BaseEstimator, TransformerMixin):
     # Initialize the class with the numerator and denominator
     def __init__(self, numerator, denominator, epsilon=1e-7):
