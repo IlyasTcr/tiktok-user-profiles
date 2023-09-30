@@ -1,14 +1,14 @@
 # Tiktok Influencer Insights: Leveraging User Behavior Data to Identify Active Content Creators
 
 ## Table of Contents
-1. Motivation
-2. Project Setup
-3. Dataset
-4. Data Analysis
-5. Data Pipeline and Feature Engineering
-6. Machine Learning Model
-7. Model Evaluation and Final Results
-8. License
+1. [Motivation](#motivation)
+2. [Project Setup](#project-setup)
+3. [Dataset](#dataset)
+4. [Data Analysis](#data-analysis)
+5. [Data Pipeline and Feature Engineering](#data-pipeline-and-feature-engineering)
+6. [Machine Learning Model](#machine-learning-model)
+7. [Model Evaluation and Final Results](#model-evaluation-and-final-results)
+8. [License](#license)
 
 ## Motivation
 This project aims to identify active content creators on TikTok by leveraging user behavior data. It is a binary classification problem where the goal is to classify users into two categories: active content creators and others. This is important as it can help businesses target their marketing efforts more effectively.
@@ -16,16 +16,16 @@ This project aims to identify active content creators on TikTok by leveraging us
 ## Project Setup
 To set up the project, create a virtual environment and activate it using the following commands:
 
-\`\`\`bash
+```bash
 python3 -m venv venv
 source venv/bin/activate
-\`\`\`
+```
 
 Then, install the dependencies given in the `requirements.txt` file with:
 
-\`\`\`bash
+```bash
 pip install -r requirements.txt
-\`\`\`
+```
 
 ## Dataset
 The dataset used in this project is publicly available on [Kaggle](https://www.kaggle.com/datasets/manishkumar7432698/tiktok-profiles-data).
