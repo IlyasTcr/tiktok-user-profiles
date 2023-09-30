@@ -31,7 +31,7 @@ pip install -r requirements.txt
 The dataset used in this project is publicly available on [Kaggle](https://www.kaggle.com/datasets/manishkumar7432698/tiktok-profiles-data).
 
 ## Data Analysis
-The dataset includes features such as the biography of the user, the average engagement rate, the bio link, the number of followers, following, likes, and whether the profile is verified or not. To get a first feeling for the most important features, mutual information scores were plotted (see screenshot below). As expected, features like the number of followers or the like_engagement_rate play a significant role in determining whether or not a user is a content creator.
+The dataset includes features such as the biography of the user, the average engagement rate, the bio link, the number of followers, following, likes, and whether the profile is verified or not. To get a first feeling for the most important features, mutual information scores were plotted (see figure below). As expected, features like the number of followers or the like_engagement_rate play a significant role in determining whether or not a user is a content creator.
 
 ![Mutual Information Scores Plot](./figures/mi-scores.png)
 
