@@ -44,7 +44,7 @@ Another interesting plot visualizes the "peaks" of the likes per video_count:
 ![Likes per Video Count Peaks](./figures/likes-per-videocount.png)
 
 ## Data Pipeline and Feature Engineering
-After doing some more extensive data analysis, here are the final decisions:
+After doing some more extensive data analysis, these are the final decisions made for the data pipeline and feature engineering:
 1. Biography-column: Missing values were **imputed** and **feature engineering** was performed using **NLP** to check the probability of being a content creator.
 2. Likes and followers columns: **Feature engineering** was performed using **PCA** to add two columns that represent the axes with the most amount of variance.
 3. Bio_link column: A new **feature was engineered** that indicates if there is a link in the bio or not.
