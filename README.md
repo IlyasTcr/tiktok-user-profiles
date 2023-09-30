@@ -49,6 +49,7 @@ After doing some more extensive data analysis, these are the final decisions mad
 2. Likes and followers columns: **Feature engineering** was performed using **PCA** to add two columns that represent the axes with the most amount of variance.
 3. Bio_link column: A new **feature was engineered** that indicates if there is a link in the bio or not.
 4. Likes and videos_count columns: A new **feature was engineered** that represents the likes_per_video ratio.
+5. Remainder columns: Passthrough 
 
 ## Machine Learning Model
 A **Pytorch** fully connected **neural network** was used with the following parameters:
